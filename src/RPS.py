@@ -37,7 +37,7 @@ def name_to_number(name):
 	else:
 		return 2
 		
-def rpsls(name): 
+def rpsls(name):
 # fill in your code below
 # convert name to player_number using name_to_number
 # compute random guess for comp_number using random.randrange()
@@ -46,19 +46,34 @@ def rpsls(name):
 # convert comp_number to name using number_to_name
 # print results
 	computer_guess = random.randrange(0, 3, 1)
-	print(computer_guess)
+	choice = name_to_number(name)
 	cmptr_name = number_to_name(computer_guess)
-	print(cmptr_name)
+	moddiff = (choice - computer_guess) % 3
+	if moddiff != 0:
+		if (moddiff < 3):
+			you_win = 1
+			winner = name
+			loser = number_to_name(computer_guess)
+		else:
+			you_win = 0
+			winner = number_to_name(computer_guess)
+			loser = name
+	else:
+		you_push = 1
+		
+	print("winner, loser")
 	
 # test your code
 print("Ready?")
 time.sleep(2)
-print('Go!')
-print('1')
+print('bump!')
 time.sleep(1)
-print('2')
+print('bump!')
 time.sleep(1)
-print('3')
+print('bump!')
+time.sleep(1)
+print('GO!')
 myGuess = input('Enter your guess: ')
-rpsls(myGuess)
+rpsls('myGuess')
+
 
