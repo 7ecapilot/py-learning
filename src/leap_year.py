@@ -1,5 +1,5 @@
 # Conditionals Examples
-# New Change
+
 
 # Return True if year is a leap year, false otherwise
 def is_leap_year(year):
@@ -13,7 +13,8 @@ def is_leap_year(year):
 		return False
 
 
-year = 2012
+year = NULL
+
 leap_year = is_leap_year(year)
 
 if leap_year:
