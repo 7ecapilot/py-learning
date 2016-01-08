@@ -1,6 +1,7 @@
 # Insert random change here
 # Rock-paper-scissors template
 import random
+import time
 
 # The key idea of this program is to equate the strings
 # "rock", "paper", "scissors" to numbers
@@ -50,7 +51,14 @@ def rpsls(name):
 	print(cmptr_name)
 	
 # test your code
-rpsls("rock")
-rpsls("scissors")
-rpsls("paper")
+print("Ready?")
+time.sleep(2)
+print('Go!')
+print('1')
+time.sleep(1)
+print('2')
+time.sleep(1)
+print('3')
+myGuess = input('Enter your guess: ')
+rpsls(myGuess)
 
